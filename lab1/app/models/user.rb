@@ -4,9 +4,8 @@ class User < ApplicationRecord
 		true
 	end
 	
-	def most_expensive_ticket_bought
+	def most_expensive_ticket_bought1
 		TicketOrder.where(User.id = TicketOrder.user_id)
-		
 	end
 end
 

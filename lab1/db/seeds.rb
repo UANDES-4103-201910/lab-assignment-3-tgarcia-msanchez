@@ -10,12 +10,13 @@
 end
 
 3.times do |i|
-  EventInformation.create(name: "Event ##{i}", description: "Desc#{i}", start_date: DateTime.now())
+  e1 = EventVenue.create(name: "Venue ##{i}", adress: "Adress#{i}", capacity: 100)
+  e2 = EventInformation.create(name: "Event ##{i}", description: "Desc#{i}", start_date: DateTime.now(), Event_venue_id: e1.id )
+  3.times do |j|
+  	TicketInformation.create(event_information_id: e2.id, price: 1000, category: "#{j}")
+  end
 end
 
-3.times do |i|
-  EventVenue.create(name: "Venue ##{i}", adress: "Adress#{i}", capacity: 100)
-end
 
 
 

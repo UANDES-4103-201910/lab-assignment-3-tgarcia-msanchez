@@ -1,3 +1,3 @@
 class EventVenue < ApplicationRecord
-	has_many :EventInformation
+	has_one:EventInformation
 end

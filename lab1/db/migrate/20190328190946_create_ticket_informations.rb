@@ -5,6 +5,17 @@ class CreateTicketInformations < ActiveRecord::Migration[5.2]
       t.string :category
 
       t.timestamps
+    
+	  
+
     end
+
+  def price 
+  	return t.price 
   end
+
+  end
+  
+  
+
 end

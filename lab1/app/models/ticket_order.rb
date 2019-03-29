@@ -1,4 +1,4 @@
 class TicketOrder < ApplicationRecord
-	has_one :user,
-	has_many :ticket_informtion
+	
+	has_one :TicketInformtion
 end
